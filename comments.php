@@ -28,13 +28,17 @@
 
 		<li <?php echo $oddcomment; ?>id="comment-<?php comment_ID() ?>">
 			<?php echo get_avatar( $comment, 32 ); ?>
-			<cite><?php comment_author_link() ?></cite> Says:
+			<?php if( $comment->comment_parent ): ?>
+			<cite><?php comment_author_link() ?></cite> replies to <?php comment_author( $comment->comment_parent ) ?>:
+			<?php else: ?>
+			<cite><?php comment_author_link() ?></cite> says:
+			<?php endif; ?>
 			<?php if ($comment->comment_approved == '0') : ?>
 			<em>Your comment is awaiting moderation.</em>
 			<?php endif; ?>
 			<br />
 
-			<small class="commentmetadata"><a href="#comment-<?php comment_ID() ?>" title=""><?php comment_date('F jS, Y') ?> at <?php comment_time() ?></a> <?php edit_comment_link('edit','&nbsp;&nbsp;',''); ?></small>
+			<small class="commentmetadata"><a href="#comment-<?php comment_ID() ?>" title=""><?php comment_date('F jS, Y') ?> at <?php comment_time() ?></a> <?php edit_comment_link('edit','&nbsp;&nbsp;',''); ?> <?php comment_reply_link(array('reply_text' => 'reply', 'before' => '&nbsp;&nbsp;', 'depth' => 1, 'max_depth' => 2)); ?></small>
 
 			<?php comment_text() ?>
 
@@ -65,6 +69,10 @@
 <?php if ('open' == $post->comment_status) : ?>
 
 <h3 id="respond">Leave a Reply</h3>
+
+<div id="cancel-comment-reply"> 
+	<small><?php cancel_comment_reply_link() ?></small>
+</div> 
 
 <?php if ( get_option('comment_registration') && !$user_ID ) : ?>
 <p>You must be <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?redirect_to=<?php echo urlencode(get_permalink()); ?>">logged in</a> to post a comment.</p>
