@@ -730,6 +730,17 @@ div.aligncenter {
 /* End captions */
 
 
+/* Begin Post Attachments */
+li.post-attachment {
+	background-position: 0 1px !important;
+	padding-left: 34px !important;
+}
+li.post-attachment::before {
+	content: "" !important;
+}
+/* End Post Attachments */
+
+
 
 /*
   Ploo, ploo, white and blue. 
