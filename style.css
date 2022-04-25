@@ -301,7 +301,6 @@ body {
 	padding: 0 0 20px 10px;
 	margin: 0px 0 0;
 /*	width: 550px;*/
-overflow:hidden;
 	}
 
 #sidebar {
@@ -323,6 +322,7 @@ text-align:right;
 }
 
 #content .post {
+  clear: both;
   margin: 0;
 }
 
@@ -692,14 +692,16 @@ a img {
 
 .navigation {
 	display: block;
-	text-align: center;
 	margin-top: 10px;
   /*height:40px;*/
   padding:2px 0px 20px 0px;
 	}
 
 .navigation .alignleft{
-  padding-right:4px;}
+  text-align: left;}
+
+.navigation .alignright{
+  text-align: right;}
 
 /* End Various Tags & Classes*/
 
