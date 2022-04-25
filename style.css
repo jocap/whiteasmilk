@@ -80,7 +80,7 @@ IT CONSISTENT.
 /* Begin Typography & Colors */
 body {
 	font-size: 62.5%; /* Resets 1em to 10px */
-	font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	font-family: Verdana, Arial, Sans-Serif;
 	/*background: #fff;
 	color: #333;*/
 	text-align: center;
@@ -93,12 +93,16 @@ body {
 #header {}
 #headerimg {}
 
+#content h2, #content h3, #content h4, #content h5, #content h6, #content ul, #content ol {
+	text-align: left;
+	}
+
 #content {
 	font-size: 1.2em
 	}
 
-#content .entry p {
-	font-size: 1.05em;
+#content .entry {
+	text-align: justify;
 	}
 
 #content .entry, #content .entry {
@@ -394,7 +398,7 @@ h2.pagetitle {
 
 h3 {
 	padding: 0;
-	margin: 30px 0 0;
+	margin: 20px 0 0;
 	}
 
 h3.comments {
