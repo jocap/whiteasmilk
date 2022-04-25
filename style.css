@@ -219,8 +219,8 @@ small, #sidebar ul ul li, #sidebar ul ol li, .nocomments, .postmetadata, blockqu
 	/*color: #777;*/
 	}
 
-code {
-	font: 1.1em 'Courier New', Courier, Fixed;
+pre {
+	font-size: 13px;
 	}
 
 acronym, abbr, span.caps
