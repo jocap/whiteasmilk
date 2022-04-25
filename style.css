@@ -520,12 +520,12 @@ ol li, #sidebar ul ol li {
 	}
 
 #sidebar #searchform #s {
-	width: 108px;
-	padding: 1px;
+	width: 90px;
+	padding: 1px 3px;
 	}
 
 #sidebar #searchsubmit {
-	padding: 1px;
+	padding: 1px 3px;
 	}
 
 .entry form { /* This is mainly for password protected posts, makes them look better. */
