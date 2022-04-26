@@ -149,14 +149,6 @@ h2 {
 	font-size: 1.6em;
 	}
 
-h2.pagetitle {
-	font-size: 1.6em;
-background-color:#e7e7e7;
-border:1px solid #777;
-padding:4px 0px 4px 0px;
-margin-top:16px;
-	}
-
 #sidebar h2 {
 	font-family: 'Lucida Grande', Verdana, Sans-Serif;
 	font-size: 1.2em;
@@ -387,8 +379,13 @@ h2 {
 	margin: 0px 0 0 0;
 	}
 
-h2.pagetitle {
-		text-align: center;
+#content h2.pagetitle {
+	font-size: 1.6em;
+	padding: 6px 0px 6px 0px;
+	margin-top: 16px;
+	border: solid #e7e7e7;
+	border-width: 3px 0;
+	text-align: center;
 }
 
 #sidebar h2 {

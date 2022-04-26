@@ -4,12 +4,7 @@
 
 	<?php if (have_posts()) : ?>
 
-		<h2 class="pagetitle">Search Results</h2>
-
-		<div class="navigation">
-			<div class="alignleft"><?php next_posts_link('&laquo; Older Entries') ?></div>
-			<div class="alignright"><?php previous_posts_link('Newer Entries &raquo;') ?></div>
-		</div>
+		<h2 class="pagetitle">Search Results for &lsquo;<?php echo get_search_query(); ?>&rsquo;</h2>
 
 
 		<?php while (have_posts()) : the_post(); ?>
@@ -24,8 +19,8 @@
 		<?php endwhile; ?>
 
 		<div class="navigation">
-			<div class="alignleft"><?php next_posts_link('&laquo; Older Entries') ?></div>
-			<div class="alignright"><?php previous_posts_link('Newer Entries &raquo;') ?></div>
+			<div class="alignleft"><?php previous_posts_link('&laquo; Previous') ?></div>
+			<div class="alignright"><?php next_posts_link('Next &raquo;') ?></div>
 		</div>
 
 	<?php else : ?>
