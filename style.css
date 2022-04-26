@@ -37,7 +37,7 @@ Tags: blue, white, fixed width, two columns, widgets, clean
   a {color:#0066CC}
 
 /*Links hover color*/
-  a:hover {color:#333}
+  a:hover, .entry p a.more-link:visited:hover {color:#333}
 
 /*Headings color*/
   .post h2 a, #sidebar h2 {color:#333;}
@@ -159,7 +159,6 @@ h3 {
 	}
 
 h1, h1 a, h1 a:hover, h1 a:visited, #headerimg{
-	text-decoration: none;
 	color: #3b6ea5;
 	}
 
@@ -167,13 +166,13 @@ h2, h2 a, h2 a:visited, h3, h3 a, h3 a:visited {
 	/*color: #333;*/
 	}
 
-h2, h2 a, h2 a:hover, h2 a:visited, h3, h3 a, h3 a:hover, h3 a:visited, #sidebar h2, #wp-calendar caption, cite {
-	text-decoration: none;
-	}
-
 .entry p a:visited {
 	color: #b85b5a;
 	}
+
+.entry p a.more-link:visited {
+	color: #0066CC;
+}
 
 .commentlist li, #commentform input, #commentform textarea {
 	font: 0.9em 'Lucida Grande', Verdana, Arial, Sans-Serif;
@@ -228,7 +227,11 @@ acronym, abbr, span.caps
 	letter-spacing: .07em;
 	}
 
-a, h2 a:hover, h3 a:hover {
+a {
+	text-decoration: none;
+}
+
+a:hover, h2 a:hover, h3 a:hover {
 /*	color: #06c;*/
 	text-decoration: underline;
 	}
